@@ -32,10 +32,15 @@
     right_border = (n - 1) * std / chi2.ppf(alpha/2, df=n-1)
     print(left_border, right_border)
 
-    #1.2
+<img width="303" alt="Снимок экрана 2022-02-28 в 00 25 55" src="https://user-images.githubusercontent.com/60537367/155900576-5c8faad5-6eab-4e78-aca4-9d95022160e2.png">
+
+    #1.2![Uploading Снимок экрана 2022-02-28 в 00.25.55.png…]()
+
     left_border = mean - norm.ppf(1 - alpha/2) * std/n**0.5
     right_border = mean + norm.ppf(1 - alpha/2) * std/n**0.5
     print(left_border, right_border)
+
+<img width="278" alt="Снимок экрана 2022-02-28 в 00 26 00" src="https://user-images.githubusercontent.com/60537367/155900585-2eafebca-6335-4848-aad7-aa97a94f6a3c.png">
 
     #interval = norm.interval(1-alpha, loc=mean, scale=std/CHE.shape[0]**0.5)
     #print(interval)
@@ -57,6 +62,8 @@
     left_border = mean - norm.ppf(1 - alpha/2) * std/n**0.5
     right_border = mean + norm.ppf(1 - alpha/2) * std/n**0.5
     print(left_border, right_border)
+    
+<img width="309" alt="Снимок экрана 2022-02-28 в 00 26 05" src="https://user-images.githubusercontent.com/60537367/155900601-d50e0b3f-2314-4098-a73d-a7c6a2ab8818.png">
 
     #interval = norm.interval(1-alpha, loc=mean, scale=std/CHE.shape[0]**0.5)
     #print(interval)
