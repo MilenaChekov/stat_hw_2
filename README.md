@@ -28,11 +28,11 @@
     n = CHE.shape[0]
 
     #1.1
-    left_border = (n - 1) * std / chi2.ppf(1 - alpha/2, df=n-1)
-    right_border = (n - 1) * std / chi2.ppf(alpha/2, df=n-1)
+    left_border = n * std**2 / chi2.ppf(1 - alpha/2, df=n-1)
+      right_border = n * std**2 / chi2.ppf(alpha/2, df=n-1)
     print(left_border, right_border)
 
-<img width="303" alt="Снимок экрана 2022-02-28 в 00 25 55" src="https://user-images.githubusercontent.com/60537367/155900576-5c8faad5-6eab-4e78-aca4-9d95022160e2.png">
+<img width="288" alt="Снимок экрана 2022-02-28 в 07 52 22" src="https://user-images.githubusercontent.com/60537367/155926206-d1110ad7-a67c-4c2c-abcb-26ead414510a.png">
 
     #1.2![Uploading Снимок экрана 2022-02-28 в 00.25.55.png…]()
 
