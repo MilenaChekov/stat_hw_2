@@ -73,20 +73,28 @@
     nenorm = df.loc[df['Category'] != "0=Blood Donor"]
     nenorm = nenorm['CHE']
     mean = []
-    std = []
+    std2 = []
     for i in range(1000):
       random_df = nenorm.sample(n=df.shape[0], replace=True)
       mean.append(np.mean(random_df))
-      std.append(np.std(random_df))
+      std2.append(np.std(random_df))
 
-    sns.histplot(mean)
-    plt.show()
-    plt.close()
-  
-![Figure_3](https://user-images.githubusercontent.com/60537367/155900438-efe27afd-930a-4df5-816c-6e9aac3398d4.png)
-
-    sns.histplot(std)
+    f = sns.histplot(mean)
+    print(f.get_xlim())
     plt.show()
     plt.close()
 
-![Figure_4](https://user-images.githubusercontent.com/60537367/155900443-eb2f117e-6f58-4b52-a8a9-f19c7354091f.png)
+![Figure_3](https://user-images.githubusercontent.com/60537367/155927438-db136401-1bb3-4818-99ae-e8c84bd09957.png)
+
+<img width="327" alt="Снимок экрана 2022-02-28 в 08 06 58" src="https://user-images.githubusercontent.com/60537367/155927403-06c70d1d-eb5f-46a6-9186-72f16196247f.png">
+
+
+    f = sns.histplot(std2)
+    print(f.get_xlim())
+    plt.show()
+    plt.close()
+    
+ ![Figure_4](https://user-images.githubusercontent.com/60537367/155927452-07c0345e-c395-4afc-807a-1f101958c8db.png)
+    
+<img width="306" alt="Снимок экрана 2022-02-28 в 08 07 02" src="https://user-images.githubusercontent.com/60537367/155927413-a052b5dd-7c8e-4997-95c3-193cc53d23f8.png">
+
